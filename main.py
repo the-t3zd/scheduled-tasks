@@ -2,10 +2,11 @@ import pandas
 import random
 import datetime as dt
 import smtplib
+import os
 
-MY_EMAIL = "123"
+MY_EMAIL = os.environ.get("MY_EMAIL")
 SMTP_SERVER = "smtp.gmail.com"
-MY_PASSWORD = "123"
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 def send_wishes(pandas_series):
     name = pandas_series["name"]
